@@ -1,6 +1,7 @@
 local constVec = vec3(0.0, 0.0, 0.0)
 local GetEntityCoords = GetEntityCoords
 local PlayerPedId = PlayerPedId
+local GetDistanceBetweenCoords = GetDistanceBetweenCoords
 local Vdist = Vdist
 local Vdist2 = Vdist2
 
