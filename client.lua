@@ -44,3 +44,25 @@ RegisterNetEvent("perf:test4", function(i)
         TriggerServerEvent("perf:test4", i, n)
     end)
 end)
+
+RegisterNetEvent("perf:test5", function(i)
+    if i == nil then error() end
+    local pos = GetEntityCoords(PlayerPedId())
+    CreateThread(function()
+        for i = 1, n do
+            local D = GetDistanceBetweenCoords(pos[1], pos[2], pos[3], constVec[1], constVec[2], constVec[3], false)
+        end
+        TriggerServerEvent("perf:test5", i, n)
+    end)
+end)
+
+RegisterNetEvent("perf:test6", function(i)
+    if i == nil then error() end
+    local pos = GetEntityCoords(PlayerPedId())
+    CreateThread(function()
+        for i = 1, n do
+            local D = GetDistanceBetweenCoords(pos[1], pos[2], pos[3], constVec[1], constVec[2], constVec[3], true)
+        end
+        TriggerServerEvent("perf:test6", i, n)
+    end)
+end)
